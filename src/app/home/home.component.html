@@ -1,0 +1,264 @@
+<div class="page-shell">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="#top">
+        <span class="brand-mark">MR</span>
+        <span class="brand-text">Muneeb Portfolio</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="#contact">Let&apos;s Talk</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="container hero-layout">
+        <div class="hero-copy" [@fadeIn]>
+          <p class="eyebrow">Full-stack engineering for ambitious business software</p>
+          <h1>
+            Designing modern digital products for
+            <span>ERP, reporting, and operations teams.</span>
+          </h1>
+          <p class="hero-text" *ngIf="resume()?.summary">{{ resume()?.summary }}</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View Selected Work</a>
+            <a class="button button-secondary" href="assets/Muneeb-Ur-Rehman-Resume.pdf" download>
+              Download Resume
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span *ngIf="resume()?.title">{{ resume()?.title }}</span>
+            <span *ngIf="resume()?.location">{{ resume()?.location }}</span>
+            <span *ngIf="resume()?.email">{{ resume()?.email }}</span>
+          </div>
+
+          <div class="stat-grid" [@staggerList]>
+            <article class="stat-card" *ngFor="let stat of stats()">
+              <strong>{{ stat.value }}</strong>
+              <span>{{ stat.label }}</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel" [@fadeIn]>
+          <div class="profile-card">
+            <div class="profile-top">
+              <div class="avatar-ring" *ngIf="resume()?.photo as photo">
+                <img [src]="photo" [alt]="resume()?.name || 'Profile photo'" />
+              </div>
+
+              <div class="profile-copy">
+                <p class="panel-label">Developer Snapshot</p>
+                <h2>{{ resume()?.name }}</h2>
+                <p>{{ resume()?.title }}</p>
+              </div>
+            </div>
+
+            <div class="focus-block">
+              <p class="panel-label">Current Focus</p>
+              <ul>
+                <li>Scalable enterprise apps with clean user experience.</li>
+                <li>Reporting systems that stay responsive under complex data loads.</li>
+                <li>Delivery pipelines that help teams ship with confidence.</li>
+              </ul>
+            </div>
+
+            <div class="quick-links">
+              <a *ngIf="resume()?.github" [href]="resume()?.github" target="_blank" rel="noopener">GitHub</a>
+              <a *ngIf="resume()?.linkedin" [href]="resume()?.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+              <a *ngIf="resume()?.website" [href]="resume()?.website" target="_blank" rel="noopener">Website</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ticker-section" aria-label="Technology highlights">
+      <div class="ticker-track">
+        <span *ngFor="let item of stackRibbon(); trackBy: trackByText">{{ item }}</span>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-heading" [@fadeIn]>
+          <p class="eyebrow">Expertise</p>
+          <h2>A portfolio shaped around real-world engineering outcomes.</h2>
+          <p>
+            The goal is not just building features. It is making business-critical software easier to trust,
+            scale, and evolve.
+          </p>
+        </div>
+
+        <div class="feature-grid" [@staggerList]>
+          <article class="feature-card" *ngFor="let card of featureCards" [@fadeIn]>
+            <p class="card-eyebrow">{{ card.eyebrow }}</p>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.text }}</p>
+
+            <ul>
+              <li *ngFor="let point of card.points">{{ point }}</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading" [@fadeIn]>
+          <p class="eyebrow">Experience</p>
+          <h2>Career timeline across product, platform, and leadership roles.</h2>
+        </div>
+
+        <div class="timeline" [@staggerList]>
+          <article class="timeline-card" *ngFor="let exp of resume()?.experience" [@fadeIn]>
+            <div class="timeline-rail">
+              <span class="timeline-dot"></span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-head">
+                <div>
+                  <p class="card-eyebrow">{{ exp.company }}</p>
+                  <h3>{{ exp.role }}</h3>
+                  <p class="supporting-text" *ngIf="exp.location">{{ exp.location }}</p>
+                </div>
+
+                <p class="date-pill">{{ exp.start }} &mdash; {{ exp.end }}</p>
+              </div>
+
+              <ul class="detail-list" *ngIf="exp.highlights?.length">
+                <li *ngFor="let item of exp.highlights">{{ item }}</li>
+              </ul>
+
+              <div class="tag-row" *ngIf="exp.technologies?.length">
+                <span *ngFor="let tech of exp.technologies">{{ tech }}</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading" [@fadeIn]>
+          <p class="eyebrow">Projects</p>
+          <h2>Selected work with measurable operational impact.</h2>
+        </div>
+
+        <div class="project-grid" [@staggerList]>
+          <article class="project-card" *ngFor="let project of featuredProjects(); let i = index" [@fadeIn]>
+            <div class="project-top">
+              <span class="project-index">0{{ i + 1 }}</span>
+              <div class="project-links">
+                <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener">Live</a>
+                <a *ngIf="project.repo" [href]="project.repo" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+
+            <h3>{{ project.name }}</h3>
+            <p class="supporting-text" *ngIf="project.description">{{ project.description }}</p>
+
+            <ul class="detail-list" *ngIf="project.highlights?.length">
+              <li *ngFor="let item of project.highlights">{{ item }}</li>
+            </ul>
+
+            <div class="tag-row" *ngIf="project.technologies?.length">
+              <span *ngFor="let tech of project.technologies">{{ tech }}</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container split-layout">
+        <div class="split-intro" [@fadeIn]>
+          <p class="eyebrow">Skills</p>
+          <h2>Technical range across applications, data, and delivery workflows.</h2>
+          <p>
+            The stack combines backend engineering depth with frontend execution and practical DevOps habits.
+          </p>
+        </div>
+
+        <div class="split-content" [@staggerList]>
+          <article class="surface-card" [@fadeIn]>
+            <p class="card-eyebrow">Capabilities</p>
+            <div class="tag-row">
+              <span *ngFor="let skill of resume()?.skills">{{ skill }}</span>
+            </div>
+          </article>
+
+          <article class="surface-card" [@fadeIn]>
+            <p class="card-eyebrow">Tools and Workflow</p>
+            <div class="tag-row">
+              <span *ngFor="let tool of resume()?.tools">{{ tool }}</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container finale-layout">
+        <article class="surface-card education-card" [@fadeIn]>
+          <p class="eyebrow">Education</p>
+          <div *ngFor="let item of resume()?.education">
+            <h3>{{ item.degree }}</h3>
+            <p class="supporting-text">
+              {{ item.institution }}
+              <span *ngIf="item.location"> | {{ item.location }}</span>
+            </p>
+            <p class="supporting-text" *ngIf="item.start || item.end">{{ item.start }} &mdash; {{ item.end }}</p>
+
+            <ul class="detail-list" *ngIf="item.highlights?.length">
+              <li *ngFor="let highlight of item.highlights">{{ highlight }}</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="contact-card" [@fadeIn]>
+          <p class="eyebrow">Contact</p>
+          <h2>Let&apos;s build software that looks sharp and works hard.</h2>
+          <p class="supporting-text">
+            Available for full-stack product work, modernization efforts, reporting systems, and internal platform tooling.
+          </p>
+
+          <div class="contact-list" [@staggerList]>
+            <div class="contact-row" *ngFor="let item of contactLinks()" [@fadeIn]>
+              <span>{{ item.label }}</span>
+              <a *ngIf="item.href; else plainValue" [href]="item.href" target="_blank" rel="noopener">
+                {{ item.value }}
+              </a>
+              <ng-template #plainValue>
+                <strong>{{ item.value }}</strong>
+              </ng-template>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; {{ year }} {{ resume()?.name }}. Built for a stronger first impression.</span>
+    </div>
+  </footer>
+</div>

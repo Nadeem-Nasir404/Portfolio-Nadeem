@@ -1,0 +1,186 @@
+{
+  "name": "Muneeb Ur Rehman",
+  "title": "Full Stack Developer | .NET | Angular | SQL",
+  "location": "",
+  "photo": "assets/Profile-Muneeb.jpeg",
+  "email": "muneebur047@gmail.com",
+  "phone": "+92 300 601 7047",
+  "website": "http://muneebtech.net/",
+  "linkedin": "https://www.linkedin.com/in/muneebur047/",
+  "github": "https://github.com/muneebctml",
+  "summary": "Full Stack Developer with 6+ years of experience building scalable ERP systems, APIs, and enterprise web applications using .NET, Azure, and modern front-end frameworks (React, Angular). Specialized in Microsoft Dynamics GP customization, SQL performance optimization, and CI/CD automation. Proven leader in mentoring teams, driving digital transformation, and delivering secure, high-performance solutions for global clients.",
+  "skills": ["C#, .NET (Core, MVC, Web API), ASP.NET, Entity Framework Core", "JavaScript, TypeScript, Angular, React", "SQL Server, T-SQL, Database Design", "Azure DevOps, CI/CD Pipelines", "HTML5, CSS3, SCSS, Bootstrap", "RESTful APIs, Microservices Architecture", "Agile Methodologies, Scrum"],
+  "tools": ["Git", "Docker", "Postman", "Visual Studio", "Azure DevOps", "SQL Server Management Studio"],
+  "experience": [
+  {
+    "company": "Tuli",
+    "role": "Senior Software Engineer",
+    "start": "Jul 2024",
+    "end": "Present",
+    "location": "Remote",
+    "highlights": [
+      "End-to-end ERP system development with .NET 9 and React.",
+      "Built CI/CD pipelines with GitLab and Docker, streamlining deployments.",
+      "Optimized PostgreSQL & ClickHouse for improved reporting and reduced costs."
+    ],
+    "technologies": ["React", ".NET 9", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD", "Hangfire"]
+  },
+  {
+    "company": "Integriti Pvt Ltd",
+    "role": "Software Engineer",
+    "start": "Oct 2023",
+    "end": "Jul 2024",
+    "location": "Lahore, Pakistan",
+    "highlights": [
+      "Developed HIPAA-compliant healthcare platform using .NET 7 & Azure SQL.",
+      "Automated invoicing, PDF generation, and email notifications.",
+      "Enhanced Razor Pages UI with jQuery for better client experience."
+    ],
+    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery", "JavaScript"]
+  },
+  {
+    "company": "Technomics",
+    "role": "Software Engineer",
+    "start": "Dec 2022",
+    "end": "Mar 2024",
+    "location": "Lahore, Pakistan",
+    "highlights": [
+      "Architected enterprise applications with ASP.NET MVC & .NET 7.",
+      "Implemented Identity Server for secure authentication & authorization.",
+      "Designed Azure-based services for real-time data processing."
+    ],
+    "technologies": [".NET 7", "ASP.NET MVC", "Identity Server", "Azure", "REST APIs", "Angular", "CI/CD"]
+  },
+  {
+    "company": "Colony Textile Mills",
+    "role": "Technical Lead",
+    "start": "Jul 2019",
+    "end": "Dec 2022",
+    "location": "Multan, Pakistan",
+    "highlights": [
+      "Customized Microsoft Dynamics GP ERP, boosting finance operations.",
+      "Integrated biometric and face scanning systems for 5,000+ employees.",
+      "Directed in-house HRM & POS app development, cutting vendor costs."
+    ],
+    "technologies": ["Microsoft Dynamics GP", "Dexterity", "SSRS", "Crystal Reports", ".NET", "Angular", "SQL Server"]
+  },
+  {
+    "company": "Desire Studio",
+    "role": "Unity Game Developer",
+    "start": "Jan 2018",
+    "end": "Jun 2019",
+    "location": "Lahore, Pakistan",
+    "highlights": [
+      "Developed and published Android games on Google Play Store.",
+      "Designed immersive environments and wrote efficient C# game scripts.",
+      "Built responsive UI/UX for mobile gameplay."
+    ],
+    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
+  }
+],
+"projects": [
+  {
+    "name": "ERP System for Textile Industry",
+    "description": "An enterprise ERP platform developed to streamline finance, HR, and operations for a textile company.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Customized Microsoft Dynamics GP ERP with in-house modules.",
+      "Integrated biometric devices for attendance tracking of 5,000+ employees.",
+      "Improved financial reporting speed by 30% with optimized SQL queries."
+    ],
+    "technologies": [".NET", "Microsoft Dynamics GP", "SQL Server", "SSRS", "Angular"]
+  },
+  {
+    "name": "Healthcare Compliance Platform",
+    "description": "A HIPAA-compliant web application enabling secure patient data management, billing, and reporting.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Developed core backend using .NET 7 and Azure SQL.",
+      "Automated invoicing, PDF reports, and email notifications.",
+      "Enhanced usability with interactive Razor Pages and jQuery."
+    ],
+    "technologies": [".NET 7", "Azure SQL", "Razor Pages", "jQuery"]
+  },
+  {
+    "name": "Cloud-Based ERP Reporting System",
+    "description": "A reporting solution for ERP systems designed to handle large-scale financial and operational datasets.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Optimized PostgreSQL & ClickHouse queries, reducing data processing costs by 25%.",
+      "Implemented CI/CD pipelines with GitLab and Docker.",
+      "Delivered real-time dashboards for executives and stakeholders."
+    ],
+    "technologies": [".NET 9", "React", "PostgreSQL", "ClickHouse", "Docker", "GitLab CI/CD"]
+  },
+  {
+    "name": "Human Resource Management System (HRMS)",
+    "description": "A complete HRM system built from the ground up, covering the entire employee lifecycle from joining to resignation.",
+    "url": "http://69.197.152.150:9809/",
+    "repo": "",
+    "highlights": [
+      "Designed and developed modules for payroll, salary-on-roll, leave management, and clearance workflows.",
+      "Implemented user-based access rights for secure role management.",
+      "Integrated with biometric devices (fingerprint, barcode) for attendance tracking.",
+      "Connected with ERP for seamless financial and operational reporting.",
+      "Automated reporting with SSRS for HR and finance departments."
+    ],
+    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "Biometric SDKs", "ERP Integration"]
+  },
+  {
+    "name": "Loom Management System",
+    "description": "A web-based control and monitoring panel for weaving machines, providing detailed production tracking, reporting, and efficiency analytics.",
+    "url": "http://69.197.152.150:9810/",
+    "repo": "",
+    "highlights": [
+      "Developed panel to monitor loom status and machine performance in real time.",
+      "Enabled supervisors to control weaving functions and track downtime.",
+      "Built reporting dashboards to measure production efficiency and output trends.",
+      "Integrated with ERP for unified textile production management."
+    ],
+    "technologies": [".NET", "Razor Pages", "AngularJS", "MSSQL", "SSRS", "jQuery", "ERP Integration"]
+  },
+  {
+    "name": "Android Games (Unity3D)",
+    "description": "Multiple mobile games developed and published on Google Play Store.",
+    "url": "",
+    "repo": "",
+    "highlights": [
+      "Designed immersive gameplay and responsive UI/UX.",
+      "Published Android titles gaining thousands of downloads.",
+      "Implemented efficient C# game scripts for smooth performance."
+    ],
+    "technologies": ["Unity3D", "C#", "Android", "Game Development"]
+  },
+  {
+    "name": "Portfolio Website",
+    "description": "A personal portfolio website showcasing projects, skills, and experience.",
+    "url": "https://muneebtech.net/",
+    "repo": "https://github.com/muneebctml/portfolio-muneeb",
+    "highlights": [
+      "Developed a responsive and modern portfolio website using Angular.",
+      "Showcased projects, skills, and professional experience effectively.",
+      "Implemented SEO best practices to enhance online visibility."
+    ],
+    "technologies": ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap"]
+  }
+],
+  "education": [
+  {
+    "institution": "Bahauddin Zakariya University - BZU",
+    "degree": "BS Computer Science",
+    "start": "2014",
+    "end": "2019",
+    "location": "Multan, Pakistan",
+    "highlights": [
+      "Completed coursework in software engineering, database systems, and distributed computing.",
+      "Graduated with strong focus on .NET development, web technologies, and cloud computing.",
+      "Led multiple academic projects including an ERP module and mobile applications.",
+      "Actively participated in coding competitions and university hackathons.",
+      "Developed a final year project integrating .NET, SQL Server, and cloud services."
+    ]
+  }
+]
+}
