@@ -7,7 +7,7 @@
     <div class="container nav-bar">
       <a class="brand" href="#top">
         <span class="brand-mark">MR</span>
-        <span class="brand-text">Muneeb Portfolio</span>
+        <span class="brand-text">Nadeem Portfolio</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
@@ -26,11 +26,9 @@
     <section class="hero section">
       <div class="container hero-layout">
         <div class="hero-copy" [@fadeIn]>
-          <p class="eyebrow">Full-stack engineering for ambitious business software</p>
-          <h1>
-            Designing modern digital products for
-            <span>ERP, reporting, and operations teams.</span>
-          </h1>
+          <p class="eyebrow">Modern Portfolio</p>
+          <h1>{{ resume()?.name }}</h1>
+          <p class="hero-role" *ngIf="resume()?.title">{{ resume()?.title }}</p>
           <p class="hero-text" *ngIf="resume()?.summary">{{ resume()?.summary }}</p>
 
           <div class="hero-actions">
