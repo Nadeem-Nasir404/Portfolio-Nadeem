@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
@@ -52,9 +52,11 @@ export class HomeComponent {
   private readonly resumeSvc = inject(ResumeService);
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
+  private readonly document = inject(DOCUMENT);
 
   readonly year = new Date().getFullYear();
   readonly resume = signal<Resume | null>(null);
+  readonly theme = signal<'light' | 'dark'>('light');
 
   readonly featureCards: FeatureCard[] = [
     {
@@ -142,6 +144,8 @@ export class HomeComponent {
   });
 
   constructor() {
+    this.applyTheme(this.getInitialTheme());
+
     this.resumeSvc.getResume().subscribe((resume) => {
       this.resume.set(resume);
 
@@ -156,8 +160,29 @@ export class HomeComponent {
     });
   }
 
+  toggleTheme(): void {
+    this.applyTheme(this.theme() === 'light' ? 'dark' : 'light');
+  }
+
   trackByText(_: number, item: string): string {
     return item;
+  }
+
+  private getInitialTheme(): 'light' | 'dark' {
+    if (typeof window === 'undefined') {
+      return 'light';
+    }
+
+    return window.localStorage.getItem('portfolio-theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  private applyTheme(theme: 'light' | 'dark'): void {
+    this.theme.set(theme);
+    this.document.documentElement.setAttribute('data-theme', theme);
+
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('portfolio-theme', theme);
+    }
   }
 
   private getYearsOfExperience(experience: Experience[]): number {

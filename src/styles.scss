@@ -1,23 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  --bg: #f7f3ff;
+  --bg: #f8f4ff;
   --bg-strong: #ffffff;
   --surface: rgba(255, 255, 255, 0.88);
   --surface-strong: rgba(255, 255, 255, 0.96);
   --surface-soft: rgba(255, 255, 255, 0.82);
   --surface-stroke: rgba(124, 58, 237, 0.16);
   --glass-highlight: rgba(255, 255, 255, 0.72);
-  --text: #18122f;
-  --muted: #6d6788;
+  --header-bg: rgba(255, 255, 255, 0.84);
+  --pill-bg: rgba(255, 255, 255, 0.94);
+  --card-top: rgba(255, 255, 255, 0.99);
+  --card-bottom: rgba(245, 250, 255, 0.92);
+  --ambient-primary: rgba(124, 58, 237, 0.28);
+  --ambient-secondary: rgba(109, 40, 217, 0.18);
+  --ambient-tertiary: rgba(34, 199, 240, 0.12);
+  --ambient-grid: rgba(124, 58, 237, 0.05);
+  --text: #191433;
+  --muted: #625a81;
   --accent: #7c3aed;
-  --accent-soft: #d946ef;
-  --accent-deep: #4f46e5;
-  --teal: #0ea5e9;
-  --shadow-soft: 0 14px 34px rgba(91, 46, 163, 0.09);
+  --accent-soft: #8b5cf6;
+  --accent-deep: #6d28d9;
+  --accent-alt: #4f46e5;
+  --accent-contrast: #ec4899;
+  --teal: #22c7f0;
+  --shadow-soft: 0 14px 34px rgba(91, 46, 163, 0.08);
   --shadow-medium: 0 26px 64px rgba(91, 46, 163, 0.12);
   --font-body: 'Manrope', 'Segoe UI', sans-serif;
   --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+:root[data-theme='dark'] {
+  --bg: #070b16;
+  --bg-strong: #0d1222;
+  --surface: rgba(13, 18, 34, 0.82);
+  --surface-strong: rgba(17, 23, 43, 0.96);
+  --surface-soft: rgba(14, 21, 39, 0.88);
+  --surface-stroke: rgba(139, 92, 246, 0.2);
+  --glass-highlight: rgba(255, 255, 255, 0.04);
+  --header-bg: rgba(8, 12, 24, 0.82);
+  --pill-bg: rgba(17, 24, 45, 0.94);
+  --card-top: rgba(18, 25, 46, 0.98);
+  --card-bottom: rgba(10, 15, 29, 0.94);
+  --ambient-primary: rgba(124, 58, 237, 0.32);
+  --ambient-secondary: rgba(109, 40, 217, 0.22);
+  --ambient-tertiary: rgba(34, 199, 240, 0.16);
+  --ambient-grid: rgba(124, 58, 237, 0.07);
+  --text: #eef2ff;
+  --muted: #9aa6c7;
+  --accent: #a855f7;
+  --accent-soft: #8b5cf6;
+  --accent-deep: #ddd6fe;
+  --accent-alt: #5b7cff;
+  --accent-contrast: #ff6db2;
+  --teal: #4ad7ff;
+  --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.24);
+  --shadow-medium: 0 26px 64px rgba(0, 0, 0, 0.4);
 }
 
 *,
@@ -36,9 +74,9 @@ body {
   font-family: var(--font-body);
   color: var(--text);
   background:
-    radial-gradient(circle at 12% 10%, rgba(124, 58, 237, 0.13), transparent 24%),
-    radial-gradient(circle at 88% 16%, rgba(14, 165, 233, 0.10), transparent 20%),
-    radial-gradient(circle at 72% 78%, rgba(217, 70, 239, 0.08), transparent 22%),
+    radial-gradient(circle at 10% 12%, rgba(124, 58, 237, 0.16), transparent 26%),
+    radial-gradient(circle at 88% 18%, rgba(139, 92, 246, 0.10), transparent 22%),
+    radial-gradient(circle at 72% 78%, rgba(34, 199, 240, 0.08), transparent 22%),
     linear-gradient(180deg, var(--bg-strong), var(--bg));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
